@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+<body>
+<h2>Edit Student: {{ student.name }}</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ fm.as_p }}
+    <button type="submit">Update</button>
+</form>
+<a href="{% url 'create' %}">Back to Home</a>
+</body>
+</html>
